@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="weather-dashboard.css" />
+  </head>
+  <body>
+    <div class="app">
+      <h1>🌤️ Weather Dashboard</h1>
+
+      <div class="search-row">
+        <input
+          type="text"
+          id="cityInput"
+          placeholder="Search a city..."
+          autocomplete="off"
+        />
+        <button class="btn" id="searchBtn">Search</button>
+      </div>
+      <div class="suggestions" id="suggestions"></div>
+
+      <div class="location-row">
+        <button class="btn secondary" id="locationBtn">
+          📍 Use my location
+        </button>
+      </div>
+
+      <div id="status">
+        <div class="spinner" style="display: none" id="spinner"></div>
+        <div id="statusText">
+          Search for a city or use your current location to get started.
+        </div>
+      </div>
+
+      <div id="weatherCard">
+        <div class="current">
+          <div class="place" id="placeName">—</div>
+          <div class="datetime" id="dateTime">—</div>
+          <div class="icon" id="weatherIcon">☀️</div>
+          <div class="temp" id="temperature">—°</div>
+          <div class="desc" id="weatherDesc">—</div>
+          <div class="feels" id="feelsLike">—</div>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-box">
+            <div class="label">Humidity</div>
+            <div class="value" id="humidity">—</div>
+          </div>
+          <div class="stat-box">
+            <div class="label">Wind</div>
+            <div class="value" id="wind">—</div>
+          </div>
+          <div class="stat-box">
+            <div class="label">Precip.</div>
+            <div class="value" id="precip">—</div>
+          </div>
+        </div>
+
+        <div class="forecast-title">5-Day Forecast</div>
+        <div class="forecast-row" id="forecastRow"></div>
+
+        <div class="updated" id="updatedAt"></div>
+      </div>
+    </div>
+
+    <script src="weather-dashboard.js"></script>
+  </body>
+</html>
